@@ -1,6 +1,20 @@
 <?php include_once "db/koneksi.php"; ?>
 <div class="row">
   <div class="col-md-8">
+
+    <?php if (isset($_GET['info'])) : ?>
+      <?php if ($_GET['info'] == "info") : ?>
+        <div class="alert alert-info alert-dismissible fade show">
+          <strong>Info!</strong> Tamnbah data berhasil.
+        </div>
+      <?php endif ?>
+      <?php if ($_GET['info'] == "delete") : ?>
+        <div class="alert alert-warning alert-dismissible fade show">
+          <strong>Info!</strong> hapus data berhasil.
+        </div>
+      <?php endif ?>
+    <?php endif ?>
+
     <div class="card m-4 p-2">
       <div class="card-header ">
         List Tamu Datang
@@ -20,6 +34,7 @@
               <th>No tlp</th>
               <th>Pesan Tamu</th>
               <th>Tanggal</th>
+              <th>Aksi</th>
             </tr>
           </thead>
           <tbody>
@@ -33,6 +48,9 @@
                 <td><?php echo $data["notelp_tamu"] ?></td>
                 <td><?php echo $data["pesan_tamu"] ?></td>
                 <td><?php echo $data["tanggal_bertamu"] ?></td>
+                <td>
+                  <a href="bukutamuDelete.php?id=<?php echo $data["id"] ?>">Hapus</a>
+                </td>
               </tr>
             <?php endwhile ?>
           </tbody>
