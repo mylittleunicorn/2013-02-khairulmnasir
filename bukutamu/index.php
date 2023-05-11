@@ -40,6 +40,9 @@
           case "bukutamu-list":
             include "bukutamuList.php";
             break;
+          case "bukutamu-add":
+            include "bukutamuAdd.php";
+            break;
           case "admin-list":
             include "adminList.php";
             break;

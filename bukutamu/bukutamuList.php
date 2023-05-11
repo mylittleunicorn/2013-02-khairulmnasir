@@ -4,6 +4,11 @@
     <div class="card m-4 p-2">
       <div class="card-header ">
         List Tamu Datang
+        <a href="index.php?halaman=bukutamu-add">
+          <button class="btn btn-success">
+            Tambah data Tamu
+          </button>
+        </a>
       </div>
       <div class="card-body">
         <table class="table table-hover">
