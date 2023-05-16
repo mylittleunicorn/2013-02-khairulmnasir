@@ -43,9 +43,13 @@
           case "bukutamu-add":
             include "bukutamuAdd.php";
             break;
+          case "bukutamu-edit":
+            include "bukutamuEdit.php";
+            break;
           case "admin-list":
             include "adminList.php";
             break;
+
           default:
             echo "halaman tidak ditemukan - 404";
             break;

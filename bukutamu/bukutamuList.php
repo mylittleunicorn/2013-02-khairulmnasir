@@ -49,7 +49,8 @@
                 <td><?php echo $data["pesan_tamu"] ?></td>
                 <td><?php echo $data["tanggal_bertamu"] ?></td>
                 <td>
-                  <a href="bukutamuDelete.php?id=<?php echo $data["id"] ?>">Hapus</a>
+                  <a href="bukutamuDelete.php?id=<?php echo $data["id"] ?>">Hapus</a> |
+                  <a href="index.php?halaman=bukutamu-edit&id=<?php echo $data['id'] ?>">Edit</a>
                 </td>
               </tr>
             <?php endwhile ?>
